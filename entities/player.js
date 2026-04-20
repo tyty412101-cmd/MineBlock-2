@@ -1,11 +1,10 @@
 function createPlayer(x, y) {
     return {
-        x,
-        y,
-        width: 1,
-        height: 2,
+        x, y,
         vx: 0,
         vy: 0,
+        width: 1,
+        height: 2,
         onGround: false
     };
 }
