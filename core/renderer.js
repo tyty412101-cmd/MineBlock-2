@@ -7,21 +7,19 @@ function render(ctx, world, player) {
         for (let x = 0; x < world[0].length; x++) {
 
             const block = world[y][x];
+            if (block === BLOCK.AIR) continue;
 
-            if (block !== BLOCK_TYPES.AIR) {
-                ctx.fillStyle = getBlockColor(block);
-
-                ctx.fillRect(
-                    x * 32 - cam.x,
-                    y * 32 - cam.y,
-                    32,
-                    32
-                );
-            }
+            ctx.fillStyle = getBlockColor(block);
+            ctx.fillRect(
+                x * 32 - cam.x,
+                y * 32 - cam.y,
+                32,
+                32
+            );
         }
     }
 
-    // player
+    // Player
     ctx.fillStyle = "red";
     ctx.fillRect(
         player.x * 32 - cam.x,
@@ -29,4 +27,6 @@ function render(ctx, world, player) {
         32,
         64
     );
+
+    renderUI(ctx, player);
 }
