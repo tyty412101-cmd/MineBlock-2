@@ -1,3 +1,3 @@
-function createWorld(width, height) {
-    return generateWorld(width, height);
+function createWorld(w, h) {
+    return generateWorld(w, h);
 }
