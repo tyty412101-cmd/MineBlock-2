@@ -1,10 +1,8 @@
-function startGameLoop(ctx, world, player) {
-
+function startGameLoop(update, render) {
     function loop() {
-        update(player);
-        render(ctx, world, player);
+        update();
+        render();
         requestAnimationFrame(loop);
     }
-
     loop();
 }
