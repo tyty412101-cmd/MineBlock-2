@@ -1,12 +1,12 @@
-function applyPhysics(player) {
-    player.vy += 0.5;
-    player.y += player.vy * 0.1;
+function applyPhysics(p) {
+    p.vy += 0.4;
+    p.y += p.vy;
 
-    if (player.y > 28) {
-        player.y = 28;
-        player.vy = 0;
-        player.onGround = true;
+    if (p.y > 48) {
+        p.y = 48;
+        p.vy = 0;
+        p.onGround = true;
     } else {
-        player.onGround = false;
+        p.onGround = false;
     }
 }
