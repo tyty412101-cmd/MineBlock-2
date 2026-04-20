@@ -1,6 +1,13 @@
 function getBlockColor(type) {
-    if (type === BLOCK_TYPES.GRASS) return "#3cb043";
-    if (type === BLOCK_TYPES.DIRT) return "#8b5a2b";
-    if (type === BLOCK_TYPES.STONE) return "#777";
-    return "#87ceeb";
+    const colors = {
+        [BLOCK.GRASS]: "#3cb043",
+        [BLOCK.DIRT]: "#8b5a2b",
+        [BLOCK.STONE]: "#777",
+        [BLOCK.SAND]: "#f4e19c",
+        [BLOCK.WATER]: "#3399ff",
+        [BLOCK.WOOD]: "#6b4423",
+        [BLOCK.LEAVES]: "#2e8b57"
+    };
+
+    return colors[type] || "#87ceeb";
 }
